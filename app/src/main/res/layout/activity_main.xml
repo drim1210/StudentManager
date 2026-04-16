@@ -7,13 +7,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 <!--    hai ba-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:columnCount="2"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Quản lý sinh viên -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardStudent"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:text="Quản Lý Sinh Viên"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Quản lý lớp -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardClass"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:text="Quản Lý Lớp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Thống kê -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSearch"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:text="Thống kê"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Đăng xuất -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLogout"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:text="Đăng xuất"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
